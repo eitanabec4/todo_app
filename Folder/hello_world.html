@@ -6,24 +6,56 @@
 h2 {color: Blue;}
 li {
     font-size: 18px; 
-    font-style: italic;
-    font-family: Times;
+    font-family: Arial;
+    font-weight: bold;
 }
-
 </style>
+<script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        </script>
 </head>
 <body> 
 <h1> SeatGeek - Making the World Smile </h1>
-<div>
+
+
 <p>All the tickets in the world at <em> <strong>your</strong> </em> fingertips </p>
 <img src = "https://chairnerd.global.ssl.fastly.net/images/new/static/logos/inline/Blue/SeatGeek_Blue.svg" alt = "SeatGeekPic" width = "200" />
 <a href="https://seatgeek.com">SeatGeek</a>
 <h2> Why you should use <strong> SeatGeek </strong> </h2>
 
-<ol> <li> Connect you to all of the tickets in the world giving you the best options </li>
-<li> Give you the best deals</li>
-<li> We have a great, established brand</li>
+<ol> <li>Connect you to all of the tickets in the world giving you the best options</li>
+<li>Give you the best deals</li>
+<li>We have a great, established brand</li>
 </ol>
 
+
+<div = TryingOnClick>
+    <p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<p id="demo"></p>
 </div> 
+
+
+<div = AddEvent>
+    <p>Add Event</p>
+    <button id="Btn2">Add Event</button>
+
+<script>
+document.getElementById("Btn2").addEventListener("click", myFunction);
+
+function myFunction() {
+  var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+    function eventHandler(e) {
+  console.log('The time is: ' + e.detail);
+}
+
+</script>
+    </div> 
 </body>
